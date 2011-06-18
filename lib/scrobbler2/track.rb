@@ -5,6 +5,10 @@ module Scrobbler2
       @query = {:artist => artist, :track => track}
     end
     
+    def initialize(mbid)
+      @query = {:mbid => mbid}
+    end     
+    
      has_resource :info, :root => 'track'
      has_resource :similar, :root => 'similartracks'
      has_resource :top_fans, :root => 'topfans'
